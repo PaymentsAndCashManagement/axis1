@@ -11,7 +11,7 @@ def stages = {
         stage('Build') {
             docker.withRegistry(REGISTRY_URL, REGISTRY_CREDENTIALS) {
                 try {
-                    mvn(this, 'clean org.jacoco:jacoco-maven-plugin:prepare-agent install -Psnapshots -U')
+                    mvn(this, 'clean org.jacoco:jacoco-maven-plugin:prepare-agent install')
                 } catch (error) {
                     throw error
                 }

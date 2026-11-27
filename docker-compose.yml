@@ -12,7 +12,7 @@ services:
       - .:/build
       - ~/.m2/repository:/tmp/.m2/repository
   mvn17:
-    image: fs-pcm-docker.artifactory.paymentscommon.pub.tds.tieto.com/tieto/mvn:3.9.11-jdk-25
+    image: fs-pcm-docker.artifactory.paymentscommon.pub.tds.tieto.com/tieto/mvn:jdk-25-latest
     environment:
       MAVEN_OPTS: '-Xmx1024M -Xss128M -XX:MetaspaceSize=512M -XX:MaxMetaspaceSize=1024M'
       MAVEN_CONFIG: /tmp
